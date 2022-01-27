@@ -1,0 +1,15 @@
+$(document).ready(function(){
+    
+    var faqContent = $('<div>');
+    faqContent.load('/pages/bm-test .Utiva_Cranberry_PACs', bm_faq_content);
+
+    function bm_faq_content() {
+      if($(window).width() < 768) {
+        $( "#bm_faq_content_mobile" ).append(faqContent);
+      }else{
+        $( "#bm_faq_content" ).append(faqContent);
+      }
+    }
+    $(window).resize(bm_faq_content);
+
+  });
