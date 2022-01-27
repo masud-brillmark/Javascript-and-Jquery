@@ -1,0 +1,7 @@
+function cf_promo_banner() {
+      if($(window).width() < 798) {
+        $('.promo_banner').replaceWith(`<div class="cf-promo_banner">Free shipping over $20</div>`);
+      } 
+    }
+    cf_promo_banner();
+    $(window).resize(cf_promo_banner);
