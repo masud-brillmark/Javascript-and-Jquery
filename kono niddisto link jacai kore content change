@@ -1,0 +1,19 @@
+<script>
+  
+  
+  $(document).ready(function(){
+    
+    var ebookContent = $(".bm-blog-post-ebook").html();
+    var ebookBanner = $(".article-banner a").attr("href");
+
+    $('.article-banner a').each(function() {
+      if ($(this).attr('href').indexOf('/products/utiva-uti-ebook') > -1) {
+        $(this).parent('.article-banner').replaceWith(ebookContent);
+      }
+    });
+    
+    
+  });
+  
+  
+</script>
